@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/* ===========================================================
+   BINTANG LANCAR BALI — Design System
+   Brand: trust blue · fresh aqua · star gold · navy ink
+   =========================================================== */
+
+@theme {
+  --color-ink: #0a1f33;
+  --color-ink-soft: #36506a;
+
+  --color-brand: #0c6fb0;
+  --color-brand-50: #eef7fd;
+  --color-brand-100: #d4ebf8;
+  --color-brand-200: #a9d6f0;
+  --color-brand-600: #0c6fb0;
+  --color-brand-700: #095688;
+  --color-brand-800: #073b5e;
+  --color-brand-900: #06283f;
+
+  --color-aqua: #19c7d6;
+  --color-aqua-soft: #d3f6f9;
+
+  --color-gold: #f7b500;
+  --color-gold-soft: #fff2cc;
+
+  --color-sand: #f2f7fb;
+  --color-line: #e2ecf3;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 10px 30px -12px rgba(6, 40, 63, 0.18);
+  --shadow-card: 0 18px 50px -20px rgba(6, 40, 63, 0.28);
+  --shadow-glow: 0 0 0 1px rgba(12, 111, 176, 0.08), 0 24px 60px -24px rgba(12, 111, 176, 0.4);
+
+  --radius-xl2: 1.75rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a1f33;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Lenis: only active on desktop where we attach it */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Utility helpers ------------------------------------------------ */
+.container-x {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-x {
+    padding-inline: 2rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(12, 111, 176, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 111, 176, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.gradient-brand {
+  background: linear-gradient(135deg, #0c6fb0 0%, #095688 45%, #19c7d6 130%);
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #0c6fb0, #19c7d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* Slow float for graphics */
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-floaty {
+    animation: none;
+  }
+}
