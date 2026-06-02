@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, SectionHeading, StatsStrip, WhyUs, CtaBand } from "@/components/sections";
 import { Reveal } from "@/components/Reveal";
-import { PlaceholderImage } from "@/components/Graphics";
+import Photo from "@/components/Photo";
 import { IconCheck } from "@/components/Icons";
 import { site } from "@/lib/site";
 
@@ -33,7 +33,13 @@ export default function TentangPage() {
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <PlaceholderImage index={0} label="Tim Bintang Lancar Bali" className="w-full rounded-3xl shadow-card" />
+            <Photo
+              src="/images/s1.jpg"
+              alt="Armada sedot Bintang Lancar Bali"
+              aspect="aspect-[4/3]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="rounded-3xl shadow-card ring-1 ring-line"
+            />
           </Reveal>
           <Reveal delay={1}>
             <SectionHeading

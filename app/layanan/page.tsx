@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, SectionHeading, ServicesGrid, StepsSection, CtaBand } from "@/components/sections";
 import { Reveal } from "@/components/Reveal";
-import { PlaceholderImage } from "@/components/Graphics";
+import Photo from "@/components/Photo";
 import { Button } from "@/components/ui";
 import { serviceIcons, IconCheck } from "@/components/Icons";
 import { services, waLink } from "@/lib/site";
@@ -45,7 +45,13 @@ export default function LayananPage() {
                 className="grid scroll-mt-28 items-center gap-10 lg:grid-cols-2"
               >
                 <Reveal className={flip ? "lg:order-2" : ""}>
-                  <PlaceholderImage index={i} label={s.title} className="w-full rounded-3xl shadow-card" />
+                  <Photo
+                    src={s.image}
+                    alt={s.title}
+                    aspect="aspect-[4/3]"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="rounded-3xl shadow-card ring-1 ring-line"
+                  />
                 </Reveal>
                 <Reveal delay={1} className={flip ? "lg:order-1" : ""}>
                   <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl gradient-brand text-white shadow-soft">

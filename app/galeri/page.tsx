@@ -2,24 +2,13 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, SectionHeading, Testimonials, CtaBand } from "@/components/sections";
 import GalleryGrid from "@/components/GalleryGrid";
+import { galleryImages } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Galeri",
   description:
     "Galeri dokumentasi pengerjaan Bintang Lancar Bali — sedot WC, saluran mampet, kuras septic tank, dan perbaikan plumbing di Bali.",
 };
-
-const gallery = [
-  "Sedot WC Profesional",
-  "Saluran Drainase",
-  "Kuras Septic Tank",
-  "Perbaikan Wastafel",
-  "Instalasi Pipa Air",
-  "Armada Modern",
-  "Pengecekan Saluran",
-  "Tim di Lokasi",
-  "Hasil Bersih & Rapi",
-];
 
 export default function GaleriPage() {
   return (
@@ -28,11 +17,11 @@ export default function GaleriPage() {
         crumb="Galeri"
         eyebrow="Dokumentasi"
         title={<>Galeri Pengerjaan Kami</>}
-        desc="Cuplikan layanan dan hasil kerja kami di berbagai lokasi di Bali. (Gambar berupa ilustrasi sementara.)"
+        desc="Cuplikan layanan dan hasil kerja kami di berbagai lokasi di Bali."
       />
 
       <Section>
-        <GalleryGrid items={gallery} />
+        <GalleryGrid items={galleryImages} />
       </Section>
 
       <section className="bg-sand py-16 md:py-24">

@@ -41,6 +41,7 @@ export type Service = {
   short: string;
   desc: string;
   points: string[];
+  image: string;
 };
 
 export const services: Service[] = [
@@ -51,6 +52,7 @@ export const services: Service[] = [
     short: "Saluran kamar mandi & got tersumbat kembali lancar.",
     desc: "Mengatasi saluran pembuangan kamar mandi, lantai, dan drainase yang tersumbat akibat rambut, sabun, lumut, atau endapan kotoran.",
     points: ["Tanpa bongkar lantai", "Alat pembersih modern", "Hasil langsung lancar"],
+    image: "/images/foto-projek.jpg",
   },
   {
     slug: "wc-toilet-mampet",
@@ -59,6 +61,7 @@ export const services: Service[] = [
     short: "Toilet mampet & tidak bisa flush ditangani cepat.",
     desc: "Solusi WC dan toilet duduk/jongkok yang mampet, air tidak turun, atau bau tidak sedap. Ditangani teknisi berpengalaman.",
     points: ["Tanpa rusak keramik", "Respons cepat 24 jam", "Bersih & higienis"],
+    image: "/images/foto-projek5.jpg",
   },
   {
     slug: "wastafel-mampet",
@@ -67,6 +70,7 @@ export const services: Service[] = [
     short: "Wastafel dapur & cuci tangan mengalir lagi.",
     desc: "Membersihkan pipa wastafel dapur dan cuci tangan yang tersumbat lemak, sisa makanan, atau kerak. Aman untuk semua jenis pipa.",
     points: ["Sedot lemak & kerak", "Tanpa bahan korosif", "Garansi pengerjaan"],
+    image: "/images/foto-projek6.jpg",
   },
   {
     slug: "pipa-kran-air-mampet",
@@ -75,6 +79,7 @@ export const services: Service[] = [
     short: "Aliran air kembali deras dan stabil.",
     desc: "Memperbaiki pipa air bersih dan kran yang tersumbat atau aliran lemah, termasuk pengecekan tekanan dan kebocoran.",
     points: ["Cek tekanan air", "Deteksi kebocoran", "Material berkualitas"],
+    image: "/images/s2.jpg",
   },
   {
     slug: "kuras-sedot-septic-tank",
@@ -83,6 +88,7 @@ export const services: Service[] = [
     short: "Septic tank penuh disedot bersih & tuntas.",
     desc: "Penyedotan dan pengurasan septic tank dengan armada modern, pembuangan limbah sesuai prosedur, dan area kerja tetap bersih.",
     points: ["Armada modern", "Sedot sampai tuntas", "Limbah dibuang aman"],
+    image: "/images/foto-projek3.jpg",
   },
   {
     slug: "perbaikan-plumbing",
@@ -91,7 +97,19 @@ export const services: Service[] = [
     short: "Instalasi & perbaikan sistem perpipaan rumah.",
     desc: "Layanan perbaikan dan pemasangan instalasi perpipaan, sambungan bocor, hingga perawatan sistem sanitasi rumah & usaha.",
     points: ["Survei gratis", "Estimasi transparan", "Untuk rumah & bisnis"],
+    image: "/images/foto-projek2.jpg",
   },
+];
+
+// Real work photos (from the original site) for the gallery.
+export const galleryImages = [
+  { src: "/images/s1.jpg", label: "Armada Sedot Modern" },
+  { src: "/images/foto-projek.jpg", label: "Sedot Saluran" },
+  { src: "/images/foto-projek3.jpg", label: "Truk Sedot Tinja" },
+  { src: "/images/foto-projek5.jpg", label: "Service WC / Toilet" },
+  { src: "/images/foto-projek2.jpg", label: "Pengerjaan dengan Mesin" },
+  { src: "/images/foto-projek6.jpg", label: "Wastafel & Dapur" },
+  { src: "/images/s2.jpg", label: "Perbaikan Plumbing" },
 ];
 
 export const advantages = [

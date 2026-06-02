@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { site, waLink } from "@/lib/site";
-import { HeroGraphic, Blob } from "./Graphics";
+import { Blob } from "./Graphics";
+import Photo from "./Photo";
 import { Button, StarRow } from "./ui";
 import { IconCheck, IconClock, IconShield, IconBolt } from "./Icons";
 
@@ -52,7 +53,8 @@ export default function Hero() {
             animate="show"
             className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-ink text-balance sm:text-5xl lg:text-[3.6rem]"
           >
-            Solusi <span className="gradient-text">Pipa &amp; WC Mampet</span> di Bali, Cepat &amp; Bergaransi
+            Solusi <span className="gradient-text">Pipa &amp; WC Mampet</span>{" "}
+            di Bali, Cepat &amp; Bergaransi
           </motion.h1>
 
           <motion.p
@@ -104,7 +106,15 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          <HeroGraphic className="w-full drop-shadow-2xl" />
+          <div className="absolute -inset-3 -z-10 rounded-[2.5rem] gradient-brand opacity-90 blur-[2px]" />
+          <Photo
+            src="/images/s2.jpg"
+            alt="Teknisi Bintang Lancar Bali memperbaiki saluran"
+            aspect="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[5/5]"
+            priority
+            sizes="(max-width: 1024px) 90vw, 45vw"
+            className="rounded-[2rem] shadow-card ring-1 ring-white/40"
+          />
 
           {/* floating rating card */}
           <motion.div

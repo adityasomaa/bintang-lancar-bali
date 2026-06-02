@@ -6,7 +6,7 @@ import { IconWhatsApp, IconMail, IconPin, IconClock, IconPhone } from "./Icons";
 export default function Footer() {
   const year = 2025;
   return (
-    <footer className="relative mt-24 overflow-hidden bg-brand-900 text-brand-100">
+    <footer className="relative overflow-hidden bg-brand-900 text-brand-100">
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-10" />
       <div className="container-x relative pt-16 pb-10">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
