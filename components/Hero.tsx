@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { site, waLink } from "@/lib/site";
-import { Blob } from "./Graphics";
-import Photo from "./Photo";
+import { HeroGraphic, Blob } from "./Graphics";
 import { Button, StarRow } from "./ui";
 import { IconCheck, IconClock, IconShield, IconBolt } from "./Icons";
 
@@ -106,15 +105,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          <div className="absolute -inset-3 -z-10 rounded-[2.5rem] gradient-brand opacity-90 blur-[2px]" />
-          <Photo
-            src="/images/s2.jpg"
-            alt="Teknisi Bintang Lancar Bali memperbaiki saluran"
-            aspect="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[5/5]"
-            priority
-            sizes="(max-width: 1024px) 90vw, 45vw"
-            className="rounded-[2rem] shadow-card ring-1 ring-white/40"
-          />
+          <HeroGraphic className="w-full drop-shadow-2xl" />
 
           {/* floating rating card */}
           <motion.div

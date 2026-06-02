@@ -79,7 +79,7 @@ export const services: Service[] = [
     short: "Aliran air kembali deras dan stabil.",
     desc: "Memperbaiki pipa air bersih dan kran yang tersumbat atau aliran lemah, termasuk pengecekan tekanan dan kebocoran.",
     points: ["Cek tekanan air", "Deteksi kebocoran", "Material berkualitas"],
-    image: "/images/s2.jpg",
+    image: "",
   },
   {
     slug: "kuras-sedot-septic-tank",
@@ -109,7 +109,6 @@ export const galleryImages = [
   { src: "/images/foto-projek5.jpg", label: "Service WC / Toilet" },
   { src: "/images/foto-projek2.jpg", label: "Pengerjaan dengan Mesin" },
   { src: "/images/foto-projek6.jpg", label: "Wastafel & Dapur" },
-  { src: "/images/s2.jpg", label: "Perbaikan Plumbing" },
 ];
 
 export const advantages = [
